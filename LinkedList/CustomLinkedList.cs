@@ -16,34 +16,39 @@ namespace LinkedList
         public void InsertLast(int new_data)
         {
             Node new_node = new Node(new_data);
-            if (this.head == null)
+            int key = new_node.data;
+            if (this.head == null || key < this.head.data)
             {
+                new_node.next = this.head;
                 this.head = new_node;
             }
             else
             {
-
-                Node last_node = getLastNode();
-                last_node.next = new_node;
+                Node temp = this.head;
+                while (temp.next != null && temp.next.data < key)
+                {
+                    temp = temp.next;
+                }
+                new_node.next = temp.next;
+                temp.next = new_node;
 
             }
-            Console.WriteLine("Node is Inserted in List: " + new_node.data);
+            Console.WriteLine("Node is Inserted in List" + new_node.data);
         }
 
         /// <summary>
         /// Gets the last node.
         /// </summary>
         /// <returns></returns>
-        public Node getLastNode()
+       /* public Node getLastNode()
         {
             Node temp = this.head;
             while (temp.next != null)
             {
                 temp = temp.next;
             }
-
             return temp;
-        }
+        }*/
 
         /// <summary>
         /// Inserts the node to the first.
@@ -195,6 +200,12 @@ namespace LinkedList
 
         }
 
+        /// <summary>
+        /// Inserts the node afetr specific node.
+        /// 
+        /// </summary>
+        /// <param name="data">The previous node data.</param>
+        /// <param name="newData">The new data.</param>
         public void insertAfterNode(int data, int newData)
         {
             Node temp = this.head;
@@ -212,9 +223,45 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+
+        /// <summary>
+        /// Deletes the specific node.
+        /// </summary>
+        /// <param name="specificData">The specific data.</param>
+        public void deleteSpecificNode(int specificData)
+        {
+            Node temp = this.head;
+
+            while (temp != null)
+            {
+                if (temp.next.data == specificData)
+                {
+                    temp.next = temp.next.next;
+                    break;
+                }
+                temp = temp.next;
+
+            }
+
+        }
         /// <summary>
         /// Display the all node in the list
         /// </summary>
+        /// 
+        public void size()
+        {
+            Node temp = this.head;
+            int c = 0;
+            while (temp != null)
+            {
+                //Console.WriteLine(" " + temp.data + " ");
+                c++;
+                temp = temp.next;
+
+            }
+
+            Console.WriteLine("size of linkedlist is: " + c);
+        }
         public void display()
         {
             Node temp = this.head;
@@ -224,14 +271,17 @@ namespace LinkedList
             }
             else
             {
+
                 while (temp != null)
                 {
                     Console.WriteLine(" " + temp.data + " ");
                     temp = temp.next;
 
                 }
+
             }
 
         }
+
     }
 }
