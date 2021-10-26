@@ -39,17 +39,20 @@ namespace LinkedList
 
         public void InsertFirst(int new_data)
         {
-
             Node new_node = new Node(new_data);
 
             new_node.next = this.head;
             this.head = new_node;
             Console.WriteLine("inserted into list: " + new_node.data);
-
-
-
-
         }
+
+        public void Append(int new_data)
+        {
+
+            InsertLast(new_data);
+            Console.WriteLine("inserted into list: " + new_data);
+        }
+
         public void display()
         {
             Node temp = this.head;
