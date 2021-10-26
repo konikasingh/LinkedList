@@ -44,12 +44,22 @@ namespace LinkedList
             //list.deleteLastNode();
             //list.display();
 
+            //list.InsertLast(56);
+            //list.InsertLast(30);
+            //list.InsertLast(70);
+            //Console.WriteLine("the list is:");
+            //list.display();
+            //list.Search(30);
+
             list.InsertLast(56);
             list.InsertLast(30);
             list.InsertLast(70);
             Console.WriteLine("the list is:");
             list.display();
-            list.Search(30);
+            Console.WriteLine("afete adding the new node list is");
+            list.insertAfterNode(30, 40);
+            list.display();
+
 
         }
     }
