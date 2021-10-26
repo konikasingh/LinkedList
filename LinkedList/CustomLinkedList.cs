@@ -27,7 +27,7 @@ namespace LinkedList
                 last_node.next = new_node;
 
             }
-            Console.WriteLine("Node is Inserted in List" + new_node.data);
+            Console.WriteLine("Node is Inserted in List: " + new_node.data);
         }
 
         /// <summary>
@@ -107,6 +107,26 @@ namespace LinkedList
                 }
             }
         }
+
+        public void deleteFirstNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+            }
+            else
+            {
+                this.head = head.next;
+            }
+        }
+        /// <summary>
+        /// Display the all node in the list
+        /// </summary>
         public void display()
         {
             Node temp = this.head;

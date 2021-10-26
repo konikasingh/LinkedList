@@ -24,10 +24,17 @@ namespace LinkedList
             //Console.WriteLine("After appending node the list is:");
             //list.display();
 
+            //list.InsertLast(50);
+            //list.InsertLast(70);
+            //Console.WriteLine("after insert node at specific position");
+            //list.specificPostition(2, 30);
+            //list.display();
+
             list.InsertLast(50);
+            list.InsertLast(30);
             list.InsertLast(70);
-            Console.WriteLine("after insert node at specific position");
-            list.specificPostition(2, 30);
+            Console.WriteLine("after deleting first node the list is:");
+            list.deleteFirstNode();
             list.display();
 
         }
