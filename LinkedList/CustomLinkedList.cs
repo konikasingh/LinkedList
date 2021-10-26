@@ -57,10 +57,8 @@ namespace LinkedList
 
             new_node.next = this.head;
             this.head = new_node;
-            Console.WriteLine("inserted into list" + new_node.data);
-
-
-
+            Console.WriteLine("inserted into list: " + new_node.data);
+            Console.WriteLine("inserted into list: " + new_node.data);
 
         }
         /// <summary>
@@ -134,6 +132,7 @@ namespace LinkedList
 
                 this.head = head.next;
 
+
             }
         }
 
@@ -165,6 +164,28 @@ namespace LinkedList
 
         }
 
+
+        public int Search(int value)
+        {
+            Node temp = this.head;
+            int flag = 0;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("{0} Node is present", value);
+                    flag = 1;
+                }
+
+                temp = temp.next;
+            }
+            if (flag == 0)
+            {
+                Console.WriteLine("{0} Node is not present", value);
+            }
+            return value;
+
+        }
         /// <summary>
         /// Display the all node in the list
         /// </summary>
@@ -184,7 +205,6 @@ namespace LinkedList
 
                 }
             }
-
         }
     }
 }
