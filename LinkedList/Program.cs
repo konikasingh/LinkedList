@@ -37,12 +37,19 @@ namespace LinkedList
             //list.deleteFirstNode();
             //list.display();
 
-            list.InsertLast(50);
+            //list.InsertLast(50);
+            //list.InsertLast(30);
+            //list.InsertLast(70);
+            //Console.WriteLine("after deleting last node the list is:");
+            //list.deleteLastNode();
+            //list.display();
+
+            list.InsertLast(56);
             list.InsertLast(30);
             list.InsertLast(70);
-            Console.WriteLine("after deleting last node the list is:");
-            list.deleteLastNode();
+            Console.WriteLine("the list is:");
             list.display();
+            list.Search(30);
 
         }
     }

@@ -8,6 +8,9 @@ namespace LinkedList
 {
     class Node
     {
+        /// <summary>
+        /// it Creates the Node 
+        /// </summary>
         public int data;
         public Node next;
         public Node(int New_Data)
