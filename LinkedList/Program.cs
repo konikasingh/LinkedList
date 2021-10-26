@@ -12,11 +12,18 @@ namespace LinkedList
             //list.InsertLast(70);
             //list.display();
 
-            list.InsertFirst(70);
-            list.InsertFirst(30);
-            list.InsertFirst(56);
-            Console.WriteLine("after inserting node the list is:");
+            //list.InsertFirst(70);
+            //list.InsertFirst(30);
+            //list.InsertFirst(56);
+            //Console.WriteLine("after inserting node the list is:");
+            //list.display();
+
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);
+            Console.WriteLine("After appending node the list is:");
             list.display();
+
         }
     }
 }
