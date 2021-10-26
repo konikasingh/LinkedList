@@ -18,10 +18,16 @@ namespace LinkedList
             //Console.WriteLine("after inserting node the list is:");
             //list.display();
 
-            list.Append(56);
-            list.Append(30);
-            list.Append(70);
-            Console.WriteLine("After appending node the list is:");
+            //list.Append(56);
+            //list.Append(30);
+            //list.Append(70);
+            //Console.WriteLine("After appending node the list is:");
+            //list.display();
+
+            list.InsertLast(50);
+            list.InsertLast(70);
+            Console.WriteLine("after insert node at specific position");
+            list.specificPostition(2, 30);
             list.display();
 
         }
