@@ -30,11 +30,18 @@ namespace LinkedList
             //list.specificPostition(2, 30);
             //list.display();
 
+            //list.InsertLast(50);
+            //list.InsertLast(30);
+            //list.InsertLast(70);
+            //Console.WriteLine("after deleting first node the list is:");
+            //list.deleteFirstNode();
+            //list.display();
+
             list.InsertLast(50);
             list.InsertLast(30);
             list.InsertLast(70);
-            Console.WriteLine("after deleting first node the list is:");
-            list.deleteFirstNode();
+            Console.WriteLine("after deleting last node the list is:");
+            list.deleteLastNode();
             list.display();
 
         }

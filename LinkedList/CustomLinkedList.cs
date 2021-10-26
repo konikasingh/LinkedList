@@ -52,11 +52,16 @@ namespace LinkedList
         /// <returns></returns>
         public void InsertFirst(int new_data)
         {
+
             Node new_node = new Node(new_data);
 
             new_node.next = this.head;
             this.head = new_node;
             Console.WriteLine("inserted into list" + new_node.data);
+
+
+
+
         }
         /// <summary>
         /// Appends the specified new data.
@@ -108,7 +113,35 @@ namespace LinkedList
             }
         }
 
+        /// <summary>
+        /// Deletes the first node.
+        /// </summary>
         public void deleteFirstNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+
+            }
+            else
+            {
+
+                this.head = head.next;
+
+            }
+        }
+
+        /// <summary>
+        /// Deletes the last node.
+        /// </summary>
+        /// <returns></returns>
+        public int deleteLastNode()
         {
             Node newNode = this.head;
             if (this.head == null)
@@ -118,12 +151,20 @@ namespace LinkedList
             if (this.head.next == null)
             {
                 this.head = null;
+                return 0;
+
             }
-            else
+            while (newNode.next.next != null)
             {
-                this.head = head.next;
+                newNode = newNode.next;
+
             }
+            int lastnode = newNode.next.data;
+            newNode.next = null;
+            return lastnode;
+
         }
+
         /// <summary>
         /// Display the all node in the list
         /// </summary>
