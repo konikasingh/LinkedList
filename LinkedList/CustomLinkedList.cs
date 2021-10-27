@@ -11,6 +11,8 @@ namespace LinkedList
         public Node head;
         /// <summary>
         /// Inserts the node to the last.
+        /// and when element is adding it checks the element is smaller or not
+        /// the sorted list
         /// </summary>
         /// <param name="new_data">The new data.</param>
         public void InsertLast(int new_data)
@@ -33,7 +35,7 @@ namespace LinkedList
                 temp.next = new_node;
 
             }
-            Console.WriteLine("Node is Inserted in List" + new_node.data);
+            Console.WriteLine("Node is Inserted in List: " + new_node.data);
         }
 
         /// <summary>
@@ -63,7 +65,6 @@ namespace LinkedList
             new_node.next = this.head;
             this.head = new_node;
             Console.WriteLine("inserted into list" + new_node.data);
-
 
         }
         /// <summary>
@@ -113,11 +114,7 @@ namespace LinkedList
                 {
                     Console.WriteLine("position is out of range");
                 }
-
             }
-
-
-
         }
 
         /// <summary>
