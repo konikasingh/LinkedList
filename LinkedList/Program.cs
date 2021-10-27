@@ -9,12 +9,12 @@ namespace LinkedList
             CustomLinkedList list = new CustomLinkedList();
 
             /*Creating a simple link list*/
-             
+
             //list.InsertLast(56);
             //list.InsertLast(30);
             //list.InsertLast(70);
             //list.display();
-            
+
             /*Adding element in Linkedlist*/
 
             //list.InsertFirst(70);
@@ -24,7 +24,7 @@ namespace LinkedList
             //list.display();
 
             /*Appending the element in linkedlist*/
-             
+
             //list.Append(56);
             //list.Append(30);
             //list.Append(70);
@@ -79,16 +79,26 @@ namespace LinkedList
 
             /*Ability to delete the element 40 in list*/
 
-            list.InsertLast(50);
-            list.InsertLast(30);
-            list.InsertLast(70);
+            //list.InsertLast(50);
+            //list.InsertLast(30);
+            //list.InsertLast(70);
 
-            Console.WriteLine("afete adding the new node list is");
-            list.insertAfterNode(30, 40);
-            list.display();
-            list.size();
-            Console.WriteLine("afete deleting specific node list is:");
-            list.deleteSpecificNode(40);
+            //Console.WriteLine("afete adding the new node list is");
+            //list.insertAfterNode(30, 40);
+            //list.display();
+            //list.size();
+            //Console.WriteLine("afete deleting specific node list is:");
+            //list.deleteSpecificNode(40);
+            //list.display();
+            //list.size();
+
+            /*Sorting linkedlist*/
+
+            list.InsertLast(56);
+            list.InsertLast(30);
+            list.InsertLast(40);
+            list.InsertLast(70);
+            Console.WriteLine("the sorted list is:");
             list.display();
             list.size();
 
